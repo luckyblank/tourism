@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hzw.tourism.mapper.RoutelMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.hzw.tourism.entity.Routel">
+        <id column="ID" property="id" />
+        <result column="ADD_USER_ID" property="addUserId" />
+        <result column="ADD_TIME" property="addTime" />
+        <result column="DELETE_STATUS" property="deleteStatus" />
+        <result column="MODIFY_USER_ID" property="modifyUserId" />
+        <result column="MODIFY_TIME" property="modifyTime" />
+        <result column="TITLE" property="title" />
+        <result column="START_SITE" property="startSite" />
+        <result column="END_SITE" property="endSite" />
+        <result column="END_TIME" property="endTime" />
+        <result column="START_TIME" property="startTime" />
+        <result column="DAY" property="day" />
+        <result column="PRODUCT_CODE" property="productCode" />
+        <result column="PRICE" property="price" />
+        <result column="STATE" property="state" />
+        <result column="IMG_URL" property="imgUrl" />
+        <result column="INTRO" property="intro" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ID, ADD_USER_ID, ADD_TIME, DELETE_STATUS, MODIFY_USER_ID, MODIFY_TIME, TITLE, START_SITE, END_SITE, END_TIME, START_TIME, DAY, PRODUCT_CODE, PRICE, STATE, IMG_URL, INTRO
+    </sql>
+
+</mapper>

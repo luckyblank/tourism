@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hzw.tourism.mapper.OrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.hzw.tourism.entity.Order">
+        <id column="ID" property="id" />
+        <result column="ADD_USER_ID" property="addUserId" />
+        <result column="ADD_TIME" property="addTime" />
+        <result column="DELETE_STATUS" property="deleteStatus" />
+        <result column="MODIFY_USER_ID" property="modifyUserId" />
+        <result column="MODIFY_TIME" property="modifyTime" />
+        <result column="USER_ID" property="userId" />
+        <result column="USER_NAME" property="userName" />
+        <result column="PRODUCT_ID" property="productId" />
+        <result column="PRODUCT_NAME" property="productName" />
+        <result column="FEE" property="fee" />
+        <result column="PRODUCT_TYPE" property="productType" />
+        <result column="STATE" property="state" />
+        <result column="ORDER_CODE" property="orderCode" />
+        <result column="ORDER_TIME" property="orderTime" />
+        <result column="SETOFF_TIME" property="setoffTime" />
+        <result column="LINK_TEL" property="linkTel" />
+        <result column="PEOPLE_COUNT" property="peopleCount" />
+        <result column="REQUIREMENT" property="requirement" />
+        <result column="IC_CODE" property="icCode" />
+        <result column="IMG_URL" property="imgUrl" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ID, ADD_USER_ID, ADD_TIME, DELETE_STATUS, MODIFY_USER_ID, MODIFY_TIME, USER_ID, USER_NAME, PRODUCT_ID, PRODUCT_NAME, FEE, PRODUCT_TYPE, STATE, ORDER_CODE, ORDER_TIME, SETOFF_TIME, LINK_TEL, PEOPLE_COUNT, REQUIREMENT, IC_CODE, IMG_URL
+    </sql>
+
+</mapper>

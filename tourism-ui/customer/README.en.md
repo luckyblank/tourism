@@ -1,7 +1,7 @@
-# tourism
+# 旅游网前端
 
 #### Description
-旅游网毕业设计项目
+和旅游网后端配套的旅游网前端代码，vue框架为基础搭建，引入elementUi组件使用
 
 #### Software Architecture
 Software architecture description

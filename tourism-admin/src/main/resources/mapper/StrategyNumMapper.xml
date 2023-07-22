@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hzw.tourism.mapper.StrategyNumMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.hzw.tourism.entity.StrategyNum">
+        <id column="strategy_id" property="strategyId" />
+        <result column="collect_count" property="collectCount" />
+        <result column="number_of_likes" property="numberOfLikes" />
+        <result column="user_id" property="userId" />
+        <result column="delete_states" property="deleteStates" />
+        <result column="add_time" property="addTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        strategy_id, collect_count, number_of_likes, user_id, detete_states, add_time
+    </sql>
+
+</mapper>

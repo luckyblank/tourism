@@ -1,0 +1,14 @@
+# 选择激活的配置
+spring:
+  profiles:
+    active: dev
+
+
+
+
+
+
+
+
+
+

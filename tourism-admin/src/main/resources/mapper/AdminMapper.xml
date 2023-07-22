@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hzw.tourism.mapper.AdminMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ID, ADD_USER_ID, ADD_TIME, DELETE_STATUS, MODIFY_USER_ID, MODIFY_TIME, TITLE, START_PLACE, END_PLACE, START_DATE, Time_Range, NEED_TIME, GATHER_PLACE, TYPE, Intermediate_Stop, IMG_URL, STATE, REMARK, PRICE,icCode
+    </sql>
+    <select id="findProvinceByid" resultType="com.hzw.tourism.vo.ProvinceVo">
+        SELECT p.`id` PROVINCE,COUNT(u.`PROVINCE`) COUNT,p.PROVINCE addr FROM tb_province p LEFT JOIN `tb_admin` u ON u.`PROVINCE` = p.`id` GROUP BY p.id
+
+    </select>
+    <select id="findfindProvinceAll" resultType="com.hzw.tourism.entity.Province">
+              SELECT p.`id` PROVINCE, p.PROVINCE addr FROM tb_province p LEFT JOIN `tb_admin` u ON u.`PROVINCE` = p.`id` GROUP BY p.id
+    </select>
+
+
+</mapper>

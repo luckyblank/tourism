@@ -1,0 +1,42 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /tourism-api
+spring:
+  # 数据源相关
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tourism?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true&rewriteBatchedStatements=true&allowMultiQueries=true
+    username: root
+    password: 123456
+  # redis相关
+  redis:
+    host: localhost        # Redis 服务器主机名
+    port: 6379                  # Redis 服务器端口
+    password:      # Redis 服务器密码（如果设置了密码）
+    database: 0                 # Redis 使用的数据库索引
+    timeout: 5000               # Redis 连接超时时间（单位：毫秒）
+  # qq mail
+  mail:
+    host: smtp.qq.com
+    username: 2071252817@qq.com
+    password: hkepdssgmeppehaj
+    default-encoding: utf-8
+    port: 587
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.connectiontimeout: 5000
+      mail.smtp.timeout: 5000
+      mail.smtp.writetimeout: 5000
+      mail.smtp.starttls.enabl: true
+
+# 配置mybatis 引入·mybatis-plus则失效
+mybatis-plus:
+  ###  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:/mapper/*.xml
+  # 指定mybatis全局配置文件中的相关配置项
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.hzw.tourism.entity
