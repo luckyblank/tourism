@@ -32,7 +32,7 @@
 >
 > 前端环境：
 >
-> ​	配置好 Node
+> ​	配置好 NodeJS
 
 
 
@@ -90,7 +90,7 @@
 
 4、修改application-dev.yml中Redis为自己的账号密码(**没有密码就空着**)
 
-```yam
+```yaml
   # redis相关
   redis:
     host: localhost        # Redis 服务器主机名
@@ -101,6 +101,21 @@
 ```
 
 5、启动TourismApplication主类
+
+
+
+### 接口文档：
+
+查看配置文件`application-dev.yml`
+
+```yaml
+server:
+  port: 8083
+  servlet:
+    context-path: /tourism-api
+```
+
+浏览器访问接口文档：http://localhost:8083/tourism-api/doc.html
 
 
 

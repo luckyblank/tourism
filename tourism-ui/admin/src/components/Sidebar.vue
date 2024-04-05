@@ -13,7 +13,7 @@
         <el-submenu
           v-if="item.children"
           :key="i"
-          index="item.name"
+          :index="item.text"
           :route="item"
         >
           <template slot="title">
